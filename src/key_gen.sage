@@ -48,6 +48,7 @@ def extract(Y):
     U = hnf * M.inverse() # U -> Private Key
     P = U*U.transpose() #P -> Public Key
 
+    #returns keys
     return (P,U)
 
 '''
