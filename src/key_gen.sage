@@ -43,8 +43,12 @@ Outputs: (P, U)
     - P, U matrices computed by the HNF of Y
 '''
 def extract(Y):
-    # TODO: integrate Harshith's HNF code
-    pass
+    #Computes Hermite Normal Form of Y
+    hnf = Y.hermite_form()
+    U = hnf * M.inverse() # U -> Private Key
+    P = U*U.transpose() #P -> Public Key
+
+    return (P,U)
 
 '''
 Inputs: (None)
