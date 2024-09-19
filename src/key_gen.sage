@@ -45,7 +45,7 @@ Outputs: (P, U)
 def extract(Y):
     #Computes Hermite Normal Form of Y
     hnf = Y.hermite_form()
-    U = hnf * M.inverse() # U -> Private Key
+    U = hnf * Y.inverse() # U -> Private Key
     P = U*U.transpose() #P -> Public Key
 
     #returns keys
